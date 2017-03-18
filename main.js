@@ -10,3 +10,6 @@ function changeColor() {
     console.log({color})
     col.style.backgroundColor =  color
 }
+function hello(){
+    alert ("hello word")
+}
