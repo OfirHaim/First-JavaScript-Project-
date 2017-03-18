@@ -27,3 +27,6 @@ function hello(){
     name:'ofir'
   });
 document.getElementById('console').innerHTML ='result:'+result;
+function ofir (){
+
+}
