@@ -1,7 +1,7 @@
 <html>
     <head>   
         <link rel="stylesheet" href="main.css" type="text/css">
-        <title>Ofir First Project </title>
+        <title>Weed </title>
     </head>
 <body>
      <script src="https://www.gstatic.com/firebasejs/3.7.2/firebase.js"></script>
@@ -10,15 +10,22 @@
   <header>
     <div class="top">    
         <h1>God bless you</h1>
-        <button onclick="changeColor();">change color</button>
+        <div
+            class="fb-like"
+            data-share="true"
+            data-width="450"
+            data-show-faces="true">
+        </div>
         <br>
         <br>
             <label><b>Username</b></label>
+            <br>
             <input type="text" placeholder="Enter Username" name="uname" required>
-            <br></br>
+            <br>
             <label><b>Password</b></label>
+            <br>
             <input type="password" placeholder="Enter Password" name="psw" required>
-            <br></br>
+            <br><br>
             <button type="submit">Login</button>
             <br></br>
             <input type="checkbox" checked="checked"> Remember me
@@ -28,6 +35,25 @@
   document.addEventListener("DOMContentLoaded", function(event) {
     console.log("DOM fully loaded and parsed");
   });
+</script>
+
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '1306537276107516',
+      xfbml      : true,
+      version    : 'v2.8'
+    });
+    FB.AppEvents.logPageView();
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
 </script>
 </body>
 </html>

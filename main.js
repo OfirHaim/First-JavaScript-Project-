@@ -9,9 +9,9 @@
 //     col.style.backgroundColor =  color
 // }
   
+ 
+ 
   // Initialize Firebase
-
-  
   var config = {
     apiKey: "AIzaSyB9NgmNvhNwX-SQWVzdp_s26i9APZQCEUk",
     authDomain: "ofir-javascript.firebaseapp.com",
@@ -25,5 +25,6 @@
   database.set({
     name: 'ofir' 
   })
-  document.getElementById('console')
+
+
 
