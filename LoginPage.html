@@ -1,21 +1,51 @@
 <HTML>
 
-<HEAD>
-
-<TITLE>Welcome To My Pages</TITLE>
-
-</HEAD>
+    <HEAD>
+        <TITLE>Welcome To My Pages</TITLE>
+    </HEAD>
 
 <BODY>
 
 <CENTER><H1>Welcome to my page!</H1></CENTER><BR>
-
+<div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="standard" data-action="like" data-size="large" data-show-faces="true" data-share="true"></div>
 <HR>
 
 <BR>
-<a href="index.html"><button>Go To Login</button></a>
-
+<center>
+<a href="index.html"><button>Home Page</button></a>
 <BR>
+<BR>
+<a href="index.html"><button>Login With Facebook</button></a>
+</center>
+<BR>
+<BR>
+<BR>
+    <div>
+       <script>
+            window.fbAsyncInit = function() {
+                FB.init({
+                appId      : '1306537276107516',
+                xfbml      : true,
+                version    : 'v2.8'
+                });
+                FB.AppEvents.logPageView();
+            };
+                (function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s); js.id = id;
+                js.src = "//connect.facebook.net/he_IL/sdk.js#xfbml=1&version=v2.8&appId=1306537276107516";
+                fjs.parentNode.insertBefore(js, fjs);
+                }(document, 'script', 'facebook-jssdk'));
+        </script>
+    </div>
+    <div id="fb-root"></div>
+    <div
+                class="fb-like"
+                data-share="true"
+                data-width="450"
+                data-show-faces="true">
+       </div>
 
 </BODY>
 
