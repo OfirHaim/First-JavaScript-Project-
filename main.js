@@ -2,8 +2,6 @@
 function rand(max) { 
     return Math.floor(Math.random() * max)
 }
-
-//
 function changeColor() {
     var col = document.getElementById("changecolor");
     const color = `rgb(${rand(256)},${rand(256)},${rand(256)})`
@@ -19,5 +17,8 @@ function changeColor() {
     messagingSenderId: "619283900405"
   };
   firebase.initializeApp(config);
-  
+  const database = firebase.database().ref('name')
+  database.set({
+    name: 'ofir' 
+  })
   document.getElementById('console')
