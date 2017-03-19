@@ -3,19 +3,31 @@
         <link rel="stylesheet" href="main.css" type="text/css">
         <title>Ofir First Project </title>
     </head>
-
-<body id="changecolor">
+<body>
      <script src="https://www.gstatic.com/firebasejs/3.7.2/firebase.js"></script>
      <div id="console"></div>
      <script src="main.js"></script>
   <header>
-    <center>    
-        <h1>My First Online Site</h1>
+    <div class="top">    
+        <h1>God bless you</h1>
         <button onclick="changeColor();">change color</button>
         <br>
         <br>
-        <button onclick="hello();">hello</button> 
-    </center>
+            <label><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" required>
+            <br></br>
+            <label><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+            <br></br>
+            <button type="submit">Login</button>
+            <br></br>
+            <input type="checkbox" checked="checked"> Remember me
+    </div>
   </header>
+ <script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    console.log("DOM fully loaded and parsed");
+  });
+</script>
 </body>
 </html>

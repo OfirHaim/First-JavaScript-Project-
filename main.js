@@ -1,17 +1,17 @@
-// fonction to get random number 
-function rand(max) { 
-    return Math.floor(Math.random() * max)
-}
-function changeColor() {
-    var col = document.getElementById("changecolor");
-    const color = `rgb(${rand(256)},${rand(256)},${rand(256)})`
-    console.log({color})
-    col.style.backgroundColor =  color
-}
-function hello(){
-    alert ("hello word")
-}
+// // fonction to get random number 
+// function rand(max) { 
+//     return Math.floor(Math.random() * max)
+// }
+// function changeColor() {
+//     var col = document.getElementById("changecolor");
+//     const color = `rgb(${rand(256)},${rand(256)},${rand(256)})`
+//     console.log({color})
+//     col.style.backgroundColor =  color
+// }
+  
   // Initialize Firebase
+
+  
   var config = {
     apiKey: "AIzaSyB9NgmNvhNwX-SQWVzdp_s26i9APZQCEUk",
     authDomain: "ofir-javascript.firebaseapp.com",
@@ -21,11 +21,9 @@ function hello(){
   };
   firebase.initializeApp(config);
 
-  var database = firebase.database()
-  var fruitRef = database.ref('fruit')
-  var result = fruitRef.set({
-    name:'ofir'
-  });
-document.getElementById('console').innerHTML ='result:'+result;
-function ofir (){
-}
+  const database = firebase.database().ref('name')
+  database.set({
+    name: 'ofir' 
+  })
+  document.getElementById('console')
+
