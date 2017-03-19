@@ -28,5 +28,4 @@ function hello(){
   });
 document.getElementById('console').innerHTML ='result:'+result;
 function ofir (){
-
 }
