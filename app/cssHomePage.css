@@ -1,0 +1,30 @@
+body{
+    margin: 0px;
+    padding:0px;
+}
+header.style-top {
+    background:#a5aabc;
+    width: 95%;
+    height: 17%;
+}
+ul.style-th{
+list-style: none;
+padding: 0;
+margin: 0;
+}
+li,a.style-homePage{
+    text-align: center;
+    font-style: italic;
+    font-size: 30px;
+}
+li.style-Menu{
+    text-align: right;
+    font-style: italic;
+    font-size: 20px;
+}
+li.style-login{
+    text-align: right;
+    vertical-align: bottom;
+    font-style: italic;
+    font-size: 20px;
+}
