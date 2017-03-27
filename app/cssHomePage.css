@@ -1,0 +1,37 @@
+body{
+    margin: 0px;
+    padding:0px;
+}
+header.style-top {
+    background:#24292e;
+    width: 100%;
+    height: 100px;
+}
+.logo{
+    float: left;
+}
+nav{
+    float: right;
+    padding: 32px;
+}
+.title{
+    text-align: center;
+    color:red;
+    display: inline;
+    margin: 842px;
+}
+nav ul li{
+    float: right;
+    list-style-type: none;
+    margin : 0 7px;
+}
+nav ul li a{
+padding: 10px;
+text-decoration: none;
+border-radius: 10px;
+color: rgba(255,255,255,0.75);
+}
+nav ul li a:hover{
+
+color: #fff;
+}
