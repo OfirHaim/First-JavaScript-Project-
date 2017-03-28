@@ -12,27 +12,51 @@ header.style-top {
 }
 nav{
     float: right;
-    padding: 32px;
+    padding: 0px;
 }
 .title{
     text-align: center;
-    color:red;
+    color:rgba(255,255,255,0.75);;
     display: inline;
     margin: 842px;
+    font-size:29;
+}
+.submenu ul {
+    padding: 0;
+    margin: 0;
+}
+.submenu li {
+    padding: 0;
+    margin: 0;
 }
 nav ul li{
     float: right;
     list-style-type: none;
-    margin : 0 7px;
+    margin: -16px 16px;
+    position: relative;
 }
 nav ul li a{
-padding: 10px;
+padding: 20px;
 text-decoration: none;
-border-radius: 10px;
 color: rgba(255,255,255,0.75);
+display: block;
+font-size: 25;
 }
 nav ul li a:hover{
-
 color: #fff;
-
+}
+nav .submenu{
+    display: none;
+    position: absolute;
+    right: -2px;
+    top:75px;
+    width: 250px;
+}
+nav ul li:hover .submenu{
+    display: block;
+}
+nav .submenu ul li a {
+    color: rgba(255,255,255,0.75);
+    background:#24292e;
+    border-radius: 20px;
 }
