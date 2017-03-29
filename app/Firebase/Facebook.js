@@ -1,3 +1,4 @@
+//wait to all element upload
 document.addEventListener("DOMContentLoaded", function (event) {
     console.log("DOM fully loaded and parsed");
 
@@ -24,17 +25,28 @@ document.addEventListener("DOMContentLoaded", function (event) {
             console.log(errorMessage)
         });
     })
- 
+
 
     var provider = new firebase.auth.FacebookAuthProvider();
     window.p = provider
 
     firebase.auth().onAuthStateChanged(function (user) {
         if (user) {
-            // User is signed in.
+            console.log("the user is sing in")
         } else {
             // No user is signed in.
             console.log('no login')
         }
     });
+});
+
+ 
+//logout function
+var logout = document.querySelector('#logout')
+    logout.addEventListener("click", function () {
+firebase.auth().signOut().then(function () {
+    console.log("logout")
+}).catch(function (error) {
+    console.log("error", error)
+});
 });
