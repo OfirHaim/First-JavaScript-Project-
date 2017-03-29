@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
             console.log(errorMessage)
         });
     })
-
+ 
 
     var provider = new firebase.auth.FacebookAuthProvider();
     window.p = provider
