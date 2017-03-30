@@ -32,7 +32,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     firebase.auth().onAuthStateChanged(function (user) {
         if (user) {
+            const { displayName, photoURL } = user
             console.log("the user is sing in")
+            console.log(displayName, photoURL)
         } else {
             // No user is signed in.
             console.log('no login')
@@ -40,13 +42,14 @@ document.addEventListener("DOMContentLoaded", function (event) {
     });
 });
 
- 
 //logout function
 var logout = document.querySelector('#logout')
-    logout.addEventListener("click", function () {
-firebase.auth().signOut().then(function () {
-    console.log("logout")
-}).catch(function (error) {
-    console.log("error", error)
+logout.addEventListener("click", function () {
+    firebase.auth().signOut().then(function () {
+        console.log("logout")
+    }).catch(function (error) {
+        console.log("error", error)
+    });
 });
-});
+
+
