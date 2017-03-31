@@ -32,10 +32,19 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     firebase.auth().onAuthStateChanged(function (user) {
         if (user) {
-            const { displayName, photoURL } = user
             console.log("the user is sing in")
-            console.log(displayName, photoURL)
-        } else {
+            const { displayName, photoURL, email } = user
+            console.log(displayName, photoURL, email)
+                        
+            //write to database 
+            const database = firebase.database().ref('Facebook_users')
+            database.set({
+                name: displayName,
+                photo: photoURL,
+                email: email
+            })
+        }
+        else {
             // No user is signed in.
             console.log('no login')
         }
