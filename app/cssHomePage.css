@@ -9,6 +9,10 @@ header.style-top {
 }
 .logo{
     float: left;
+    height: 74px;
+    width: 91px;
+    /*background: url("weed-cannabis-wiet-rasta.png")*/
+    
 }
 nav{
     float: right;
