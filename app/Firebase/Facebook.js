@@ -26,17 +26,21 @@ document.addEventListener("DOMContentLoaded", function (event) {
         });
     })
 
-
     var provider = new firebase.auth.FacebookAuthProvider();
     window.p = provider
 
     firebase.auth().onAuthStateChanged(function (user) {
+        const userImg = document.querySelector('#userImg')
+
         if (user) {
             console.log("the user is sing in")
+
             const { displayName, photoURL, email } = user
-            console.log(displayName, photoURL, email)
-                        
-            //write to database 
+            // console.log(displayName, photoURL, email)
+            
+            //show the profile image
+            userImg.setAttribute('src', photoURL)
+
             const database = firebase.database().ref('Facebook_users')
             database.set({
                 name: displayName,
@@ -47,6 +51,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
         else {
             // No user is signed in.
             console.log('no login')
+            // hide the profile picture
+            userImg.setAttribute('src', '')
         }
     });
 });
