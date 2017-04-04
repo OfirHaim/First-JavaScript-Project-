@@ -1,7 +1,12 @@
 //wait to all element upload
+function bind (el,attr,data) {
+    el.setAttribute(attr,data)
+}
+
 document.addEventListener("DOMContentLoaded", function (event) {
     console.log("DOM fully loaded and parsed");
 
+        const imgEl = document.querySelector('#dan')
 
     var btn = document.querySelector('#foo')
     btn.addEventListener("click", function () {
@@ -12,6 +17,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
             var token = result.credential.accessToken;
             // The signed-in user info.
             var user = result.user;
+               
             // ...
         }).catch(function (error) {
             // Handle Errors here.
@@ -47,8 +53,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
                 photo: photoURL,
                 email: email
             })
+             imgEl.style.display = 'block'
         }
         else {
+             imgEl.style.display = 'none'
             // No user is signed in.
             console.log('no login')
             // hide the profile picture
