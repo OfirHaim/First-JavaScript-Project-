@@ -1,12 +1,12 @@
 //wait to all element upload
-function bind (el,attr,data) {
-    el.setAttribute(attr,data)
+function bind(el, attr, data) {
+    el.setAttribute(attr, data)
 }
 
 document.addEventListener("DOMContentLoaded", function (event) {
     console.log("DOM fully loaded and parsed");
 
-        const imgEl = document.querySelector('#dan')
+    // const imgEl = document.querySelector('#dan')
 
     var btn = document.querySelector('#foo')
     btn.addEventListener("click", function () {
@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
             var token = result.credential.accessToken;
             // The signed-in user info.
             var user = result.user;
-               
+
             // ...
         }).catch(function (error) {
             // Handle Errors here.
@@ -43,9 +43,11 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
             const { displayName, photoURL, email } = user
             // console.log(displayName, photoURL, email)
-            
+
             //show the profile image
             userImg.setAttribute('src', photoURL)
+
+            // imgEl.style.display = 'block'
 
             const database = firebase.database().ref('Facebook_users')
             database.set({
@@ -53,12 +55,16 @@ document.addEventListener("DOMContentLoaded", function (event) {
                 photo: photoURL,
                 email: email
             })
-             imgEl.style.display = 'block'
+            $("#div1").show();
         }
         else {
-             imgEl.style.display = 'none'
+            $("#div1").hide();
+           
+            // imgEl.style.display = 'none'
+           
             // No user is signed in.
             console.log('no login')
+           
             // hide the profile picture
             userImg.setAttribute('src', '')
         }
@@ -74,5 +80,3 @@ logout.addEventListener("click", function () {
         console.log("error", error)
     });
 });
-
-
