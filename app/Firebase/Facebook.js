@@ -1,8 +1,4 @@
 //wait to all element upload
-function bind(el, attr, data) {
-    el.setAttribute(attr, data)
-}
-
 document.addEventListener("DOMContentLoaded", function (event) {
     console.log("DOM fully loaded and parsed");
 
@@ -55,13 +51,11 @@ document.addEventListener("DOMContentLoaded", function (event) {
                 photo: photoURL,
                 email: email
             })
-            $("#div1").show();
+            // $("#div1").show();
+            $('#dan').attr('<img src="/IMG/dan.jpg"/>');
+            
         }
         else {
-            $("#div1").hide();
-           
-            // imgEl.style.display = 'none'
-           
             // No user is signed in.
             console.log('no login')
            
@@ -76,7 +70,12 @@ var logout = document.querySelector('#logout')
 logout.addEventListener("click", function () {
     firebase.auth().signOut().then(function () {
         console.log("logout")
-    }).catch(function (error) {
+       
+        //remove the img when the user click on logout
+          $("#dan").remove();
+          console.log("מח'תי")
+    
+}).catch(function (error) {
         console.log("error", error)
     });
 });
