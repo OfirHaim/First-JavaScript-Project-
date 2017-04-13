@@ -51,24 +51,12 @@ document.addEventListener("DOMContentLoaded", function (event) {
                 photo: photoURL,
                 email: email
             })
-<<<<<<< HEAD
-          
-            $("#div1").show();
+
+            $('#EMimg').append('<img src="/IMG/dan.jpg" class="EMimgcss" id=EMremove/>');
         }
         else {
-         
-            // imgEl.style.display = 'none'
-           
-=======
-            // $("#div1").show();
-            $('#dan').attr('<img src="/IMG/dan.jpg"/>');
-            
-        }
-        else {
->>>>>>> b939b920060031088269394ff825a4978282077f
             // No user is signed in.
             console.log('no login')
-           
             // hide the profile picture
             userImg.setAttribute('src', '')
         }
@@ -80,17 +68,12 @@ var logout = document.querySelector('#logout')
 logout.addEventListener("click", function () {
     firebase.auth().signOut().then(function () {
         console.log("logout")
-<<<<<<< HEAD
-         $("#div1").remove();
-    }).catch(function (error) {
-=======
-       
+
         //remove the img when the user click on logout
-          $("#dan").remove();
-          console.log("מח'תי")
-    
-}).catch(function (error) {
->>>>>>> b939b920060031088269394ff825a4978282077f
+        $("#EMremove").remove();
+
+    }).catch(function (error) {
+
         console.log("error", error)
     });
 });
