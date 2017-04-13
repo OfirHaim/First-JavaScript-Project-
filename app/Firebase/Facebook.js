@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
         const userImg = document.querySelector('#userImg')
 
         if (user) {
-            console.log("the user is sing in")
+            console.log("the user is signed in")
 
             const { displayName, photoURL, email } = user
             // console.log(displayName, photoURL, email)
@@ -55,11 +55,11 @@ document.addEventListener("DOMContentLoaded", function (event) {
                 photo: photoURL,
                 email: email
             })
+          
             $("#div1").show();
         }
         else {
-            $("#div1").hide();
-           
+         
             // imgEl.style.display = 'none'
            
             // No user is signed in.
@@ -76,6 +76,7 @@ var logout = document.querySelector('#logout')
 logout.addEventListener("click", function () {
     firebase.auth().signOut().then(function () {
         console.log("logout")
+         $("#div1").remove();
     }).catch(function (error) {
         console.log("error", error)
     });
