@@ -10,9 +10,7 @@ header.style-top {
 .logo{
     float: left;
     height: 74px;
-    width: 91px;
-    /*background: url("weed-cannabis-wiet-rasta.png")*/
-    
+    width: 91px;    
 }
 nav{
     float: right;
@@ -42,7 +40,7 @@ color: #fff;
 nav .submenu{
     display: none;
     position: absolute;
-    right: -0px;
+    right: 0px;
     top:45px;
 }
 nav ul li:hover .submenu{

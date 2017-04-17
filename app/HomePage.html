@@ -1,10 +1,10 @@
-<html >
+<html>
 
 <HEAD>
     <script src="https://www.gstatic.com/firebasejs/3.7.2/firebase.js"></script>
     <script src="jquery-3.2.0.js"></script>
     <link rel="stylesheet" href="cssHomePage.css" type="text/css">
-   
+
     <!--<link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">-->
     <title>HomePage</title>
 </HEAD>
@@ -32,8 +32,8 @@
                 <li> <a href="#">Login</a>
                     <div class="submenu">
                         <ul>
-                            <li>
-                                <a href="#" id="foo">Facebook</a>
+                            <li class="AddLoginBtn">
+                                <a href="#" id="foo">Login-Facebook</a>
                                 <a href="#" id="logout">Log-Out</a>
                             </li>
                         </ul>
@@ -42,9 +42,7 @@
                 <li> <a href="#">Menu</a>
                     <div class="submenu">
                         <ul>
-                            <li>
-                                <a href="#">Chat</a>
-                            </li>
+                            <li> <a href="#">Chat</a> </li>
                         </ul>
                     </div>
                 </li>
@@ -52,7 +50,9 @@
             </ul>
         </nav>
     </header>
-    <div  id="EMimg"> </div>
+    <div id="EMimg"></div>
+
+
     <script src="Firebase/InitFirabase.js"></script>
     <script src="Firebase/Facebook.js"></script>
     <!--<script src="Firebase/DataBase.js"></script>-->
